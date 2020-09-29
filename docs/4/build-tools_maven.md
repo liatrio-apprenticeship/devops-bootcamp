@@ -92,9 +92,13 @@ mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp
  2. Add [Jetty](https://www.eclipse.org/jetty/documentation/current/jetty-maven-plugin.html) to `pom.xml`.
 ```
 <build>
-    <groupId>org.eclipse.jetty</groupId>
-    <artifactId>jetty-maven-plugin</artifactId>
-    <version>9.4.31.v20200723</version>
+  <plugins>
+    <plugin>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>9.4.31.v20200723</version>
+    </plugin>
+  </plugins>
 </build>
 ```
  3. Run Jetty.
